@@ -1,7 +1,9 @@
 module API
   class QuotesController < ApplicationController
+    
     def random
-      render json: Quote.all.shuffle.first
+      render json: Quote.get_random_quote
     end
+    
   end
 end
