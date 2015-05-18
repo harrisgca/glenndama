@@ -1,4 +1,5 @@
 Person.destroy_all
+Quote.destroy_all
 
 @first_names = [
 'Allison',
@@ -170,4 +171,29 @@ end
 
 100.times do
   Person.create(first_name: random_first_name, last_name: random_last_name, age: random_age)
+end
+
+quotes = ["I've been watching you, Neo, and I want to meet you.  I don't know if you're ready to see what I want to show you, but unfortunately, we have run out of time.  They're coming for you, Neo.  And I'm not sure what they're going to do.",
+        "We know that you have been contacted by a certain individual. A man who calls himself Morpheus. Whatever you think you know about this man is irrelevant to the fact that he is wanted for acts of terrorism in more countries than any other man in the world.  He is considered by many authorities to be the most dangerous man alive.",
+        "I've watched you, Neo.  You do not use a computer like a tool.  You use it like it was part of yourself.  What you can do inside a computer is not normal.  I know. I've seen it.  What you do is magic.",
+        "It's that feeling you have had all your life.  That feeling that something was wrong with the world.  You don't know what it is but it's there, like a splinter in your mind, driving you mad, driving you to me.  But what is it?",
+        "The Matrix is everywhere, it's all around us, here even in this room. You can see it out your window, or on your television.  You feel it when you go to work, or go to church or pay your taxes.  It is the worldthat has been pulled over your eyes to blind you from the truth.",
+        "That you are a slave, Neo.  That you, like everyone else, was born into bondage... kept inside a prison that you cannot smell, taste, or touch.  A prison for your mind.",
+        "What is real?  How do you define real?  If you're talking about your senses, what you feel, taste, smell, or see, then all you're talking about are electrical signals interpreted by your brain.",
+        "This is the Chicago you know. Chicago as it was at the end of the twentieth century.  This Chicago exists only as part of a neural-interactive simulation that we call the Matrix.",
+        "Unfortunately, no one can be told what the Matrix is. You have to see it for yourself.",
+        "The Matrix is a system, Neo. That system is our enemy. But when you're inside, you look around, what do you see? Businessmen, teachers, lawyers, carpenters. The very minds of the people we are trying to save. But until we do, these people are still a part of that system and that makes them our enemy. You have to understand, most of these people are not ready to be unplugged. And many of them are so inured, so hopelessly dependent on the system, that they will fight to protect it.",
+        "I imagine that right now, you're feeling a bit like Alice. Hmm? Tumbling down the rabbit hole?",
+        "Have you ever had a dream, Neo, that you were so sure was real? What if you were unable to wake from that dream? How would you know the difference between the dream world and the real world?",
+        "Welcome to the desert of the real.",
+        "You are the One, Neo. You see, you may have spent the last few years looking for me, but I have spent my entire life looking for you.",
+        "This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.",
+        " What is the Matrix? Control. The Matrix is a computer-generated dream world built to keep us under control in order to change a human being into this.",
+        "We've survived by hiding from them, by running from them. But they are the gatekeepers. They are guarding all the doors, they are holding all the keys. Which means that sooner or later, someone is going to have to fight them.",
+        "I know exactly what you mean. Let me tell you why you're here. You're here because you know something. What you know, you can't explain. But you feel it. You felt it your entire life. That there's something wrong with the world. You don't know what it is, but it's there. Like a splinter in your mind - driving you mad. It is this feeling that has brought you to me. Do you know what I'm talking about?"
+
+      ]
+
+quotes.each do |quote_body|
+  Quote.create(text:quote_body)
 end
