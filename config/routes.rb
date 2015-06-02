@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :people, only:[:index,:show]
+    resources :superheroes, only:[:index,:show,:create, :update,:destroy]
     get '/quotes' => 'quotes#random'
   end
   # The priority is based upon order of creation: first created -> highest priority.
